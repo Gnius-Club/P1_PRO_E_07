@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Sesión 7: ¡Una Sorpresa Más! - Diseñar Interacción Extra</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #ffa500; color: white; text-align: center; padding: 10px; } /* Orange Accent */
+        .activity { margin-bottom: 20px; }
+        details > summary {
+            background-color: #ffa500; /* Orange Accent */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 0px; /* Reduced margin */
+            font-weight: bold;
+            list-style: none; /* Hide default arrow */
+            position: relative;
+            outline: none;
+            border-radius: 5px 5px 0 0; /* Rounded top corners */
+        }
+        details > summary::-webkit-details-marker { display: none; } /* Hide default arrow for Chrome/Safari */
+        details > summary::before { /* Custom Arrow */
+            content: '▶';
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.9em; /* Slightly larger arrow */
+            transition: transform 0.2s;
+        }
+        details[open] > summary::before { /* Custom Arrow when open */
+            transform: translateY(-50%) rotate(90deg);
+        }
+        details .content { /* Content visible by default inside details */
+             display: block;
+             padding: 15px; /* More padding */
+             border: 1px solid #ddd;
+             border-top: none; /* Avoid double border with summary */
+             margin-bottom: 10px;
+             border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px; /* Add some space above the table */
+        }
+        th, td {
+            padding: 12px; /* Slightly more padding */
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top; /* Ensure content aligns at the top */
+        }
+        th {
+            background-color: #f8f8f8; /* Lighter grey background for headers */
+            font-weight: bold;
+        }
+        /* Style for the 'Action' column */
+        td:first-child {
+            width: 50%;
+        }
+        /* Style for the 'Dialogue' column */
+        td:last-child {
+            width: 50%;
+        }
+        /* Making facilitator instructions clearer */
+        td em, td i { /* Style for italicized facilitator notes */
+            color: #555;
+            font-style: italic;
+            display: block; /* Put notes on new lines */
+            margin-top: 5px;
+        }
+        /* Ensure step <strong> tags render bold */
+        td strong { font-weight: bold; display: block; margin-bottom: 5px; }
+
+
+        span[style*="color: red;"] {
+            font-weight: bold;
+        }
+        ul, ol {
+            margin-top: 5px; /* Adjust spacing for lists */
+            margin-bottom: 10px;
+            padding-left: 25px; /* Indent lists slightly more */
+        }
+        li {
+            margin-bottom: 8px; /* More space between list items */
+        }
+        .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555; font-weight: bold;}
+         hr { border: none; border-top: 1px solid #eee; margin: 8px 0; } /* Subtle separator */
+         .subtitle { font-size: 0.9em; color: #e0e0e0; margin-top: 5px;} /* Subtitle style from example */
+    </style>
+    <script>
+        // Basic script to ensure details elements work consistently if needed,
+        // but modern browsers handle <details> natively.
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook - Sesión 7: ¡Una Sorpresa Más! - Diseñar Interacción Extra</h1>
+    </div>
+    <div class="container">
+        <h2 class="time-title">Tiempo efectivo de clase: 40 minutos</h2>
+
+        <!-- Resumen de Sesión -->
+        <details id="activity-0" class="activity" open> <!-- Open by default -->
+            <summary>📝 Resumen de Sesión</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
+                            <strong>🎯 Objetivo de la Sesión:</strong>
+                            <ul>
+                                <li>Diseñar (planificar en papel/digital) una pequeña interacción adicional y simple para añadir más detalle o diversión a la Escena Mejor del proyecto.</li>
+                                <li>Fomentar la creatividad y la propuesta de ideas dentro del equipo.</li>
+                                <li>Practicar la planificación de una secuencia de interacción simple ("Paper Programming").</li>
+                                <li>Asegurar que el diseño sea factible de programar en la siguiente sesión.</li>
+                            </ul>
+                        </td>
+                        <td style="width: 50%; padding: 10px;">
+                            <strong>🔑 Entregable Clave:</strong> Un dibujo o esquema simple (en papel o Magic Tablet) que represente la secuencia de la mini-interacción extra diseñada (Ej: Objeto -> Al Tocar -> Acción/Resultado).
+                            <br><br>
+                            <strong>⏱️ Duración Estimada:</strong> 40 minutos.
+                            <br><br>
+                            <strong>🛠️ Materiales Específicos:</strong>
+                            <ul>
+                                <li>Dispositivos con Scratch Jr. y el proyecto estable guardado de la Sesión 6 (para referencia visual de la Escena Mejor).</li>
+                                <li>Papel y lápices/colores o Magic Tablets con herramienta de dibujo.</li>
+                                <li>Tablero Kanban con el estado actualizado de la Sesión 6.</li>
+                                <li>Nueva tarjeta de tarea para Kanban: "Diseñar Interacción Extra".</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Actividad 1: Stand-up Creativo -->
+        <details id="activity-1" class="activity">
+            <summary>💡 Actividad 1: Stand-up Creativo ⏰ Tiempo: 5 minutos</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1 (2 min): Revisión y Propuesta Sorpresa</strong>
+                            <br>Reunir a los equipos con su proyecto abierto en la Escena Mejor.
+                            <br>Felicitar por tener un proyecto estable y funcional.
+                            <br>Introducir la idea de añadir "una sorpresa más".
+                            <br><strong>Proyectar Diapositiva 1</strong> (Título de la Sesión + Icono de caja de regalo 🎁 o estrella brillante ✨).
+                        </td>
+                        <td>
+                            "¡Hola de nuevo, equipos expertos! Su aventura funciona genial, ¡felicidades por ese gran trabajo de calidad!"
+                            <br><br>
+                            "Como han trabajado tan bien, hoy tenemos una misión especial... ¡Añadir UNA SORPRESA MÁS! <em>(Mostrar Diapositiva 1)</em>. Vamos a pensar en un pequeño detalle extra, algo divertido que el jugador pueda descubrir en la Escena Mejor."
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2 (3 min): Lluvia de Ideas para la Sorpresa</strong>
+                             <br>Guiar una lluvia de ideas rápida: ¿Qué objeto o personaje en la Escena Mejor podría hacer algo si lo tocamos?
+                             <br>Dar ejemplos simples (tocar árbol -> cae fruta, tocar sol -> gira, tocar animal -> hace sonido).
+                             <br><strong>Proyectar Diapositiva 2</strong> (Mostrar iconos o dibujos simples de los ejemplos: árbol con fruta cayendo, sol girando, animal con bocadillo de sonido).
+                             <br>Animar a los equipos a pensar en algo sencillo y divertido relacionado con su Escena Mejor.
+                        </td>
+                        <td>
+                            "Miren su Escena Mejor. ¿Hay algo interesante ahí? ¿Un árbol, el sol, un animalito amigo, una flor?"
+                            <br><br>
+                            "¿Qué podría pasar si lo tocamos? ¡Ideas, ideas! Quizás al tocar el árbol, ¡cae una fruta! O si tocamos el sol, ¡gira un poquito! O si tocamos a un amigo, ¡nos saluda con un sonido! <em>(Mostrar Diapositiva 2)</em>."
+                            <br><br>
+                             "Piensen en algo simple y divertido que encaje con su escena feliz. ¡Solo una pequeña sorpresa!"
+                             <br>
+                            <em>(Dar 1-2 minutos para que los equipos piensen ideas).</em>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Actividad 2: Diseñando la Sorpresa -->
+        <details id="activity-2" class="activity">
+            <summary>✍️ Actividad 2: Diseñando la Sorpresa ⏰ Tiempo: 30 minutos</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1 (5 min): Decisión del Equipo (Diseñador/a Lidera)</strong>
+                            <br>El **Diseñador/a** guía al equipo para elegir UNA de las ideas de interacción extra.
+                            <br>Enfatizar que debe ser algo SIMPLE y relacionado con la Escena Mejor.
+                            <br>Asegurarse de que todo el equipo esté de acuerdo.
+                        </td>
+                        <td>
+                            "¡Equipos, hora de decidir! Diseñadores, ayuden a su equipo a elegir UNA sola idea para la sorpresa extra. Recuerden, ¡algo simple y divertido para la Escena Mejor!"
+                            <br><br>
+                            "¿Será el árbol que da fruta? ¿El sol que gira? ¿El amigo que saluda? ¡Pónganse de acuerdo!"
+                             <br>
+                            <em>(Dar tiempo para la decisión).</em> "¿Ya tienen su idea sorpresa? ¡Genial!"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2 (5 min): Pensando en los Bloques (Constructor/a) y Pruebas (Probador/a)</strong>
+                            <br>Pedir al **Constructor/a** que piense qué bloques necesitaría (sin programar aún). Ej: "Necesitaré 'Al Tocar' y quizás 'Mostrar' o 'Girar'".
+                            <br>Pedir al **Probador/a** que piense cómo probaría esa nueva interacción una vez programada. Ej: "Tendría que tocar ese objeto y ver si pasa lo que dibujamos".
+                        </td>
+                        <td>
+                            "¡Excelente idea! Ahora, pensemos un poco..."
+                            <br><br>
+                            "Constructores, ¿qué bloques creen que necesitaríamos para hacer que eso pase? Solo piénsenlo, no hay que buscarlos aún. ¿Quizás el bloque amarillo de 'Tocar'? ¿Y luego qué bloque haría la acción? ¿Uno de movimiento, uno de aparecer...?"
+                            <br><br>
+                            "Probadores, ¿cómo sabríamos si funciona bien? ¿Qué tendrían que hacer ustedes para probar esta sorpresa?"
+                             <br>
+                            <em>(Breve reflexión guiada sobre los posibles bloques y la prueba).</em>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 3 (15 min): Dibujar la Interacción (Paper Programming)</strong>
+                            <br>Entregar papel/lápices o abrir herramienta de dibujo en Magic Tablet.
+                            <br>Guiar a los equipos para que dibujen la secuencia simple:
+                            <ol>
+                                <li>Dibujar el objeto/personaje que se toca.</li>
+                                <li>Dibujar una flecha o dedo indicando "Al Tocar".</li>
+                                <li>Dibujar el resultado/acción (ej. fruta apareciendo, sol girado, bocadillo de sonido).</li>
+                            </ol>
+                             <br><strong>Proyectar Diapositiva 3</strong> (Mostrar un ejemplo visual muy simple de este diagrama: Objeto -> Flecha/Dedo -> Resultado). Llamarlo "Nuestro Plan Secreto" o "Mapa de la Sorpresa".
+                            <br>Mover tarjeta "Diseñar Interacción Extra" a "¡Haciendo Ahora!".
+                            <br>Facilitador circula y ayuda a simplificar los dibujos y la secuencia.
+                        </td>
+                        <td>
+                            "¡Ahora vamos a dibujar nuestro 'Plan Secreto' para esta sorpresa! ¡Usaremos Paper Programming!"
+                            <br><br>
+                            "Tomen su papel o tablet. Es muy fácil: <em>(Mostrar Diapositiva 3)</em>."
+                            <br>
+                            "1. Dibujen el objeto o personaje de la Escena Mejor que van a tocar (ej. el árbol)."
+                            <br>
+                            "2. Dibujen una flecha grande o un dedito apuntando a ese objeto, que signifique 'Al Tocar'."
+                            <br>
+                            "3. Dibujen lo que pasa DESPUÉS de tocar (ej. una fruta apareciendo debajo del árbol, o el sol con líneas de giro, o el amigo con un bocadillo que diga '¡Hola!')."
+                             <br><br>
+                            "¡Este dibujo será nuestra guía para programar la próxima vez! ¡Háganlo claro y simple!"
+                            <br><br>
+                            "¡Movemos 'Diseñar Interacción Extra' a '¡Haciendo Ahora!' en el Kanban! ¡A dibujar el plan!"
+                             <br>
+                            <em>(Facilitador asiste: "¡Exacto! Primero el árbol...", "Y la flecha para indicar que lo tocas...", "¡Y ahora dibuja la fruta! Perfecto.").</em>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 4 (5 min): Refinar el Dibujo y Kanban</strong>
+                            <br>Revisar brevemente los dibujos de cada equipo. Asegurarse de que la secuencia sea clara y simple.
+                            <br>Si el plan está claro, mover la tarjeta "Diseñar Interacción Extra" a "✅ ¡Terminado!".
+                        </td>
+                        <td>
+                            "¡A ver esos planes secretos! ¿Se entiende bien qué hay que tocar y qué pasa después?"
+                            <br><br>
+                            <em>(Revisar rápidamente cada dibujo con el equipo).</em> "¡Sí, este plan está muy claro! ¡Sabremos qué programar!"
+                            <br><br>
+                            "¡Si su plan está listo y claro, muevan la tarjeta a '✅ ¡Terminado!' en el Mapa Mágico!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Actividad 3: Plan Check y Cierre -->
+        <details id="activity-3" class="activity">
+            <summary>📋 Actividad 3: Plan Check y Cierre ⏰ Tiempo: 5 minutos</summary>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1 (2 min): Revisión Final del Plan</strong>
+                            <br>Preguntar a cada equipo si creen que su plan para la sorpresa es algo que podrán programar con los bloques que conocen.
+                            <br>Confirmar que la idea es factible para la siguiente sesión.
+                        </td>
+                        <td>
+                            "¡Equipos, último vistazo a su 'Mapa de la Sorpresa'!"
+                            <br><br>
+                            "Viendo su plan, ¿creen que es algo que podremos hacer con los bloques de Scratch Jr. la próxima vez? ¿Parece posible?"
+                            <br><br>
+                            <em>(Confirmar brevemente la factibilidad con cada equipo).</em> "¡Creo que sí! ¡Son ideas geniales y posibles!"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2 (2 min): Guardar Plan y Próximos Pasos</strong>
+                            <br>Instruir a los equipos para que guarden bien su dibujo/plan (si es digital, guardar archivo; si es papel, guardarlo en carpeta del equipo).
+                            <br>Anunciar que la próxima sesión será para programar esta interacción extra.
+                            <br><strong>Proyectar Diapositiva 4</strong> (Icono de Guardar Plan/Dibujo + Mensaje "¡Plan Guardado! Próxima Misión: ¡Programar la Sorpresa!").
+                        </td>
+                        <td>
+                            "¡Muy importante! ¡Guarden bien su 'Mapa de la Sorpresa'! Si es en papel, en su carpeta. Si es digital, asegúrense de guardarlo."
+                            <br><br>
+                            "¡Este plan será nuestra guía para la próxima sesión! <em>(Mostrar Diapositiva 4)</em>."
+                            <br><br>
+                            "¿Y qué haremos la próxima vez? ¡Exacto! ¡Vamos a usar los bloques de Scratch Jr. para PROGRAMAR esta sorpresa y hacerla realidad!"
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 3 (1 min): Cierre</strong>
+                            <br>Felicitar por el diseño creativo.
+                        </td>
+                        <td>
+                            "¡Felicidades, diseñadores de sorpresas! Han planeado un detalle extra que hará su aventura aún más especial."
+                            <br><br>
+                            "¡Gran trabajo creativo hoy! ¡Nos vemos para programar esa sorpresa! ¡Adiós!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </details>
+
+    </div> <!-- Fin del container -->
+</body>
+</html>

@@ -74,7 +74,9 @@
             margin-top: 5px;
         }
         /* Ensure step <strong> tags render bold */
-        td strong { font-weight: bold; display: block; margin-bottom: 5px; }
+        /* td strong { font-weight: bold; display: block; margin-bottom: 5px; } This was too generic, handled below */
+        td strong { font-weight: bold; } /* General strong for keywords */
+        td > strong { display: block; margin-bottom: 5px; } /* For step headers */
 
 
         span[style*="color: red;"] {
@@ -152,7 +154,7 @@
                             <br>Reunir a los equipos con su proyecto abierto en la Escena Mejor.
                             <br>Felicitar por tener un proyecto estable y funcional.
                             <br>Introducir la idea de añadir "una sorpresa más".
-                            <br><strong>Proyectar Diapositiva 1</strong> (Título de la Sesión + Icono de caja de regalo 🎁 o estrella brillante ✨).
+                            <br><strong>Proyectar Diapositiva 1</strong>.
                         </td>
                         <td>
                             "¡Hola de nuevo, equipos expertos! Su aventura funciona genial, ¡felicidades por ese gran trabajo de calidad!"
@@ -164,8 +166,8 @@
                         <td>
                             <strong>Paso 2 (3 min): Lluvia de Ideas para la Sorpresa</strong>
                              <br>Guiar una lluvia de ideas rápida: ¿Qué objeto o personaje en la Escena Mejor podría hacer algo si lo tocamos?
-                             <br>Dar ejemplos simples (tocar árbol -> cae fruta, tocar sol -> gira, tocar animal -> hace sonido).
-                             <br><strong>Proyectar Diapositiva 2</strong> (Mostrar iconos o dibujos simples de los ejemplos: árbol con fruta cayendo, sol girando, animal con bocadillo de sonido).
+                             <br>Dar ejemplos simples.
+                             <br><strong>Proyectar Diapositiva 2</strong>.
                              <br>Animar a los equipos a pensar en algo sencillo y divertido relacionado con su Escena Mejor.
                         </td>
                         <td>
@@ -193,8 +195,8 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 1 (5 min): Decisión del Equipo (Diseñador/a Lidera)</strong>
-                            <br>El **Diseñador/a** guía al equipo para elegir UNA de las ideas de interacción extra.
+                            <strong>Paso 1 (5 min): Decisión del Equipo (<strong>Diseñador/a</strong> Lidera)</strong>
+                            <br>El <strong>Diseñador/a</strong> guía al equipo para elegir UNA de las ideas de interacción extra.
                             <br>Enfatizar que debe ser algo SIMPLE y relacionado con la Escena Mejor.
                             <br>Asegurarse de que todo el equipo esté de acuerdo.
                         </td>
@@ -208,9 +210,9 @@
                     </tr>
                     <tr>
                         <td>
-                            <strong>Paso 2 (5 min): Pensando en los Bloques (Constructor/a) y Pruebas (Probador/a)</strong>
-                            <br>Pedir al **Constructor/a** que piense qué bloques necesitaría (sin programar aún). Ej: "Necesitaré 'Al Tocar' y quizás 'Mostrar' o 'Girar'".
-                            <br>Pedir al **Probador/a** que piense cómo probaría esa nueva interacción una vez programada. Ej: "Tendría que tocar ese objeto y ver si pasa lo que dibujamos".
+                            <strong>Paso 2 (5 min): Pensando en los Bloques (<strong>Constructor/a</strong>) y Pruebas (<strong>Probador/a</strong>)</strong>
+                            <br>Pedir al <strong>Constructor/a</strong> que piense qué bloques necesitaría.
+                            <br>Pedir al <strong>Probador/a</strong> que piense cómo probaría esa nueva interacción una vez programada.
                         </td>
                         <td>
                             "¡Excelente idea! Ahora, pensemos un poco..."
@@ -226,13 +228,8 @@
                         <td>
                             <strong>Paso 3 (15 min): Dibujar la Interacción (Paper Programming)</strong>
                             <br>Entregar papel/lápices o abrir herramienta de dibujo en Magic Tablet.
-                            <br>Guiar a los equipos para que dibujen la secuencia simple:
-                            <ol>
-                                <li>Dibujar el objeto/personaje que se toca.</li>
-                                <li>Dibujar una flecha o dedo indicando "Al Tocar".</li>
-                                <li>Dibujar el resultado/acción (ej. fruta apareciendo, sol girado, bocadillo de sonido).</li>
-                            </ol>
-                             <br><strong>Proyectar Diapositiva 3</strong> (Mostrar un ejemplo visual muy simple de este diagrama: Objeto -> Flecha/Dedo -> Resultado). Llamarlo "Nuestro Plan Secreto" o "Mapa de la Sorpresa".
+                            <br>Guiar a los equipos para que dibujen la secuencia simple.
+                             <br><strong>Proyectar Diapositiva 3</strong>.
                             <br>Mover tarjeta "Diseñar Interacción Extra" a "¡Haciendo Ahora!".
                             <br>Facilitador circula y ayuda a simplificar los dibujos y la secuencia.
                         </td>
@@ -298,9 +295,9 @@
                     <tr>
                         <td>
                             <strong>Paso 2 (2 min): Guardar Plan y Próximos Pasos</strong>
-                            <br>Instruir a los equipos para que guarden bien su dibujo/plan (si es digital, guardar archivo; si es papel, guardarlo en carpeta del equipo).
+                            <br>Instruir a los equipos para que guarden bien su dibujo/plan.
                             <br>Anunciar que la próxima sesión será para programar esta interacción extra.
-                            <br><strong>Proyectar Diapositiva 4</strong> (Icono de Guardar Plan/Dibujo + Mensaje "¡Plan Guardado! Próxima Misión: ¡Programar la Sorpresa!").
+                            <br><strong>Proyectar Diapositiva 4</strong>.
                         </td>
                         <td>
                             "¡Muy importante! ¡Guarden bien su 'Mapa de la Sorpresa'! Si es en papel, en su carpeta. Si es digital, asegúrense de guardarlo."
